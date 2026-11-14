@@ -1,0 +1,8 @@
+Your Conversation Log:
+You: my name is Dharsh
+AI: Nice to meet you, Dharsh! How can I assist you today?
+
+You: what is my name?
+AI: Your name is Dharsh.
+
+End of Conversation

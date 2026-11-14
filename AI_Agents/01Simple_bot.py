@@ -2,7 +2,7 @@
 from typing import TypedDict
 from langgraph.graph import StateGraph , START,END
 from langchain_core.messages import HumanMessage
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
 
@@ -11,7 +11,7 @@ load_dotenv()
 class AgentState(TypedDict):
     messages: list[HumanMessage]
 
-llm=ChatOpenAI(model="gpt-4o")
+llm=ChatGroq(model="openai/gpt-oss-120b")
 
 def process(state:AgentState) -> AgentState:
     response=llm.invoke(state["messages"])
