@@ -34,7 +34,6 @@ def model_call(state):
 
 def should_continue(state: AgentState):
     last_message = state['messages'][-1]
-    # if the model requested a tool call, go to the tool node; otherwise finish
     if not last_message.tool_calls:
         return "end"
     return "continue"
